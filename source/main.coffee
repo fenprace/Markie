@@ -32,6 +32,7 @@ flag = 0
 # Functioning
 resize      = -> $('#current').autosize().trigger('autosize.resize')
 position    = -> document.getElementById('current').selectionStart
+no_range    = -> position() is document.getElementById('current').selectionEnd
 is_first    = -> flag is 0
 is_at_end   = -> position() >= $('#current').val().length - 1
 is_last     = -> @Markie.source_list_after(flag).length is 0
@@ -61,8 +62,8 @@ refresh     = ->
   resize()
   if e.keyCode is 38 and position() is 0 and not is_first()
     @Markie.up()
-  if e.keyCode is 8  and position() is 0 and not is_first()
+  if e.keyCode is 8  and position() is 0 and no_range() and not is_first()
     @Markie.up()
-  if e.keyCode is 40 and is_at_end()     and not is_last()
+  if e.keyCode is 40 and is_at_end() and not is_last()
     @Markie.down()
     
