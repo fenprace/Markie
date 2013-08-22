@@ -1,0 +1,57 @@
+@serif: Georgia, Cambria, "Times New Roman", serif;
+@mono: Monaco, "Courier New", monospace;
+@size: 1.2em;
+.oneline (@size: 1.2em) {
+  font-size: @size;
+  line-height: @size;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  width: 640px;
+  margin: 0 auto;
+  font-family: @serif;
+
+  * { .oneline; }
+}
+
+#markie {
+  width: 100%;
+
+  a {}
+
+  blockquote {
+    padding-left: 18px;
+    border-left: 4px solid rgba(0, 0, 0, 0.2);
+  }
+
+  h1 {
+    font-size: 1.6em;
+    font-family: @serif;
+    font-variant: small-caps;
+    font-weight: bold;
+  }
+
+  p, pre {
+    margin: 15px 0;
+    font-size: 14px;
+  }
+}
+
+#current {
+  .oneline;
+  height: @size;
+  width: 100%;
+  font-family: @mono;
+  margin: 10px -10px;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.02);
+}
