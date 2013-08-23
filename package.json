@@ -1,0 +1,22 @@
+{
+  "name": "Markie",
+  "version": "0.0.1",
+  "description": "Not only \"yet another markdown editor\", but also a WYSIWYG markdown editor.",
+  "main": "main.js",
+  "scripts": {
+    "js": "coffee -o scripts -cm source/*.coffee",
+    "css": "lessc source/main.less > stylesheets/main.css",
+    "dev-compile": "npm run-script js; npm run-script css",
+    "compile": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fenprace/Markie.git"
+  },
+  "keywords": ["Markdown", "Editor"],
+  "author": "Prace Fen",
+  "license": "Apache License, Version 2.0",
+  "bugs": {
+    "url": "https://github.com/fenprace/Markie/issues"
+  }
+}
